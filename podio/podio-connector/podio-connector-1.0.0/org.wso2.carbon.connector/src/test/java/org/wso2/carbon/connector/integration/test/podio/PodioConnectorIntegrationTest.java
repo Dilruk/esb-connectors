@@ -552,7 +552,7 @@ public class PodioConnectorIntegrationTest extends ConnectorIntegrationTestBase 
       String apiEndPoint = apiUrl + "/task/" + taskId;
       
       RestResponse<JSONObject> apiRestResponse =
-            sendJsonRestRequest(apiEndPoint, "PUT", apiRequestHeadersMap, "api_createTask_negative.json");
+            sendJsonRestRequest(apiEndPoint, "PUT", apiRequestHeadersMap, "api_updateTask_negative.json");
       Assert.assertEquals(esbRestResponse.getBody().getString("error"), apiRestResponse.getBody().getString("error"));
       Assert.assertEquals(esbRestResponse.getBody().getString("error_description"), apiRestResponse.getBody()
             .getString("error_description"));

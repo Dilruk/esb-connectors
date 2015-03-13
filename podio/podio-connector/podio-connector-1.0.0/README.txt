@@ -53,18 +53,18 @@ STEPS:
 	   
 5. Compress modified ESB as wso2esb-4.8.1.zip and copy that zip file in to location "{Podio_Connector_Home}/podio-connector/podio-connector-1.0.0/org.wso2.carbon.connector/repository/".
 
-6. Add the file which are used for upload file method to the following location and update the values of the parameters iii corresponding to the added files.
+6. Add the file which are used for upload file method to the following location and update the values of the properties iii corresponding to the added files.
 	Location: "{Podio_Connector_Home}/podio-connector/podio-connector-1.0.0/org.wso2.carbon.connector/src/test/resources/artifacts/ESB/config/resources/podio/"
 
 7. Update the property file podio.properties found in {Podio_Connector_Home}/podio-connector/podio-connector-1.0.0/org.wso2.carbon.connector/src/test/resources/artifacts/ESB/connector/config as follows:
 	
-	i)	 apiUrl 					- 	API endpoint to which the service calls are made. e.g. https://api.podio.com.
-	ii) accessToken			- 	Use the Access token obtained in Step 3 - iii.
-	iii)uploadSourcePath	   -	File name with the extention which is added to resources folder i Step 6.
-	iv) userId				   - 	User ID of the account owner.
-	v)	 text					   -	Use a string value for task text.
-	vi) remindDelta			- 	Use a positive integer value lower than 1440 for the minutes to use in reminder.
-	vii)timeOut					- 	Time out value for waiting since the podio API limit the continuous endpoint calls (recommended value is 5000)
+	i)  apiUrl 		   - 	API endpoint to which the service calls are made. e.g. https://api.podio.com.
+	ii) accessToken		   - 	Use the Access token obtained in Step 3 - iii.
+	iii)uploadSourcePath	   -	File name with the extention which is added to resources folder in Step 6.
+	iv) userId		   - 	User ID of the account owner.
+	v)  text		   -	Use a string value for task text.
+	vi) remindDelta		   - 	Use a positive integer value lower than 1440 for the minutes to use in reminder.
+	vii)timeOut		   - 	Time out value for waiting since the podio API limit the continuous endpoint calls (recommended value is 5000)
 
 8. Navigate to "{Podio_Connector_Home}/podio-connector/podio-connector-1.0.0/org.wso2.carbon.connector/" and run the following command.
       $ mvn clean install
